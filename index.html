@@ -3,47 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link href="./output.css" rel="stylesheet">
+
     <title>Portfolio</title>
-    <style>
-        ul {
-          list-style-type: none;
-          margin: 0;
-          padding: 0;
-          overflow: hidden;
-          background-color: #333333;
-          padding-right: 5%;
-          
-        }
-        
-        li {
-            text-align: center;
-          float: right;
-        }
-        
-        li a {
-          display: block;
-          color: white;
-          text-align: center;
-          height: auto;
-          padding: 16px;
-          text-decoration: none;
-        }
-        
-        li a:hover {
-          background-color: #111111;
-        }
-        </style>
+    
 </head>
 <body>
-   
-    <ul >
-        <p style="float: left;padding-left: 20px; font-size: larger;color: aliceblue;">Nakshatra Agrawal</p>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#project">Project</a></li>
-        <li><a href="merntask.html" target="_blank">Task</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#home">Home</a></li>
-      </ul>
+   <div class=" flex">
+    <p style="float: left;padding-left: 20px; font-size: larger;color: aliceblue;">Nakshatra Agrawal</p>
+
+    <ul class=" flex ">
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#project">Project</a></li>
+      <li><a href="merntask.html" target="_blank">Task</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#home">Home</a></li>
+    </ul>
+   </div>
+    
       <div>
         <div>
             img
@@ -61,5 +39,6 @@
       <div>
         Contact
       </div>
+      
 </body>
 </html>
