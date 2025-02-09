@@ -5,33 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <link href="./output.css" rel="stylesheet">
-
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <title>Portfolio</title>
-    
 </head>
-<body>
-   <div class=" flex bg-green-300 p-3">
-    <h1 class="place-content-center text-2xl">Nakshatra Agrawal</h1>
-<div class="">
-  <ul class=" flex ">
-    <li class=" w-24 hover:bg-green-500 hover:text-xl "><a href="#home">Home</a></li>
-    <li class=" w-24 hover:bg-green-500 hover:text-xl "><a href="#about">About</a></li>
-    <li class=" w-24 hover:bg-green-500 hover:text-xl "><a href="merntask.html" target="_blank">Task</a></li>
-    <li class=" w-24 hover:bg-green-500 hover:text-xl "><a href="#project">Project</a></li>
-    <li class=" w-24 hover:bg-green-500 hover:text-xl "><a href="#contact">Contact</a></li>
-  </ul>
-</div>
-    
-   </div>
-    
-      <div>
-        <div>
-            img
+
+<body class="bg-black text-white">
+  <!-- Header -->
+  <div class="  mt-2" style="padding: 10px 10%;" id="Header">
+   
+    <!-- Navbar -->
+
+    <nav class="flex justify-between flex-wrap">  
+      <h1 class="place-content-center text-3xl underline underline-offset-8 decoration-amber-300">Nakshatra Agrawal</h1>
+      
+      <!-- list of navbar -->
+       
+      <ul class=" flex ">
+
+          <li class=" w-24 mx-2 text-center hover:text-red-500 hover:text-xl hover:underline hover:underline-offset-8 hover:decoration-amber-300 ease-in duration-75">
+            <i class="fa fa-home fa-fw" aria-hidden="true"></i>
+            <a  href="#">Home</a>
+          </li>
+
+          <li class=" w-24 mx-2 text-center hover:text-red-500 hover:text-xl hover:underline hover:underline-offset-8 hover:decoration-amber-300 ease-in duration-75">
+            <a  href="#about">About</a>
+          </li>
+
+          <li class=" w-24 mx-2 text-center hover:text-red-500 hover:text-xl hover:underline hover:underline-offset-8 hover:decoration-amber-300 ease-in duration-75">
+            <a  href="merntask.html" target="_blank">Task</a>
+          </li>
+
+          <li class=" w-24 mx-2 text-center hover:text-red-500 hover:text-xl hover:underline hover:underline-offset-8 hover:decoration-amber-300 ease-in duration-75">
+            <a  href="#project">Project</a>
+          </li>
+
+          <li class=" w-24 mx-2 text-center hover:text-red-500 hover:text-xl hover:underline hover:underline-offset-8 hover:decoration-amber-300 ease-in duration-75">
+            <a  href="#contact">Contact</a>
+          </li>
+
+      </ul>
+      
+    </nav><br>
+    <div class="my-40 text-3xl">
+      <p>Frontend Designer</p>
+      <h1 class="duration-200 ease-in mt-5  ">Hi. I am <span class="text-red-500 italic font-bold">Nakshatra Agrawal</span> <br>
+        from Khandwa
+    </div>
+  <!-- Navbar End -->
+
+   <!-- About -->
+      <div class="flex w-full gap-10 place-content-center " style="padding: 0px 5%; " >
+        <div class="w-1/3 rounded-2xl p-5 border-white border-solid border-2">
+            <img src="./day2/OFFICER.jpg" class=" rounded-2xl ">
+        </div>
+        <div class="w-2/3  py-10" id="About">
+            <h1 class="text-4xl underline underline-offset-8 decoration-red-500">
+              About Me
+            </h1> 
+            <P class="mt-8 " style="text-justify: auto;">
+              Owning the quick learning , teamworking & leading skills . 
+              To enhance the growl of my knowledge along with the development of technology is my <span>MAIN GOAL </span>. 
+              Also looking forward me as an inspiration to youth genetration in upcomimng 5 to 10 years.<br>
+              <span class="font-bold mt-2">Thankyou!!
+            </P>
         </div>
         <div>
-            about and para
+          <p>skills</p>
         </div>
       </div>
+
+      <!--- About End-->
       <div>
         project
       </div>

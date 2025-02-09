@@ -1,0 +1,17 @@
+#Header {
+    background-image: url(day3/bg.png);
+}
+nav div ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav div ul li a:hover::after{
+    width: 100%;
+}
+
