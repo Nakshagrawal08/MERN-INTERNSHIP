@@ -15,7 +15,7 @@
         <!-- Navbar -->
         <nav class="flex justify-between flex-wrap">
             <h1 class="text-3xl underline underline-offset-8 decoration-amber-300">Nakshatra Agrawal</h1>
-            <ul class="flex space-x-6  md:mt-5  ">
+            <ul class="flex space-x-6  mt-5 lg:mt-2  ">
                 <li class="w-24 text-center hover:text-rose-400 hover:text-xl hover:underline hover:underline-offset-8 hover:decoration-amber-300">
                     <a href="#">Home</a>
                 </li>
@@ -40,7 +40,7 @@
     </div>
 
     <!-- About -->
-    <div class="flex mt-10 justify-center gap-10 px-4 lg:px-16">
+    <div class="md:flex mt-10 justify-center gap-10 px-4 lg:px-16">
         <div class="w-full sm:w-1/3 rounded-2xl px-2 py-8 border-white border-solid border-2 shadow-lg">
             <img src="./day2/OFFICER.jpg" class="rounded-2xl max-w-full h-auto" alt="Nakshatra Agrawal">
         </div>
@@ -50,30 +50,36 @@
                 Owning quick learning, teamworking, and leadership skills. 
                 To enhance the growth of my knowledge along with the development of technology is my <span class="font-bold">MAIN GOAL</span>.
                 Also, looking forward to becoming an inspiration for the youth generation in the upcoming 5 to 10 years.
-                <br><br class="font-bold">Than      </p>
-            <div class="flex flex-wrap mt-3 mb-6">
-                <p onclick="opentab(event, 'skills')" class="activelink tablink mr-16 mb-3 hover:underline hover:underline-offset-8 hover:decoration-rose-500 decoration-2">Skills</p>
-                <p onclick="opentab(event, 'experience')" class="tablink mr-16 mb-3 hover:underline hover:underline-offset-8 hover:decoration-rose-500 decoration-2">Experience</p>
-                <p onclick="opentab(event, 'education')" class="tablink mr-16 mb-3 hover:underline hover:underline-offset-8 hover:decoration-rose-500 decoration-2">Education</p>
-            </div>
-            <div class="tabcontent activecontent" id="skills">
-                <ul style="list-style-type: disc;">
-                    <li ><span class="text-rose-400">Web Development</span><br>Web App Development</li>
-                    <li ><span class="text-rose-400">App Development</span><br>Building Android apps</li>
-                </ul>
-            </div>
-            <div class="tabcontent" id="experience">
-                <ul style="list-style-type: disc;">
-                    <li ><span class="text-rose-400">2024-current</span><br>ABC Company</li>
-                    <li ><span class="text-rose-400">2022-2024</span><br>XYZ Company</li>
-                </ul>
-            </div>
-            <div class="tabcontent" id="education">
-                <ul style="list-style-type: disc;">
-                    <li ><span class="text-rose-400">2022-2026</span><br> Btech With CS Branch</li>
-                    <li ><span class="text-rose-400">2021-2022</span><br>High School With PCM+CS</li>
-                </ul>
-            </div>
+                <br><br class="font-bold">Thankyou      </p>
+                <div class="flex md:flex-none">
+                    <div class="md:flex md:flex-wrap mt-3 mb-6">
+                        <p onclick="opentab(event, 'skills')" class="activelink tablink mr-16 mb-3 hover:underline hover:underline-offset-8 hover:decoration-rose-500 decoration-2">Skills</p>
+                        <p onclick="opentab(event, 'experience')" class="tablink mr-16 mb-3 hover:underline hover:underline-offset-8 hover:decoration-rose-500 decoration-2">Experience</p>
+                        <p onclick="opentab(event, 'education')" class="tablink mr-16 mb-3 hover:underline hover:underline-offset-8 hover:decoration-rose-500 decoration-2">Education</p>
+                    </div>
+                    <div>
+                        <div class="tabcontent activecontent" id="skills">
+                            <ul style="list-style-type: disc;">
+                                <li ><span class="text-rose-400">Web Development</span><br>Web App Development</li>
+                                <li ><span class="text-rose-400">App Development</span><br>Building Android apps</li>
+                            </ul>
+                        </div>
+                        <div class="tabcontent" id="experience">
+                            <ul style="list-style-type: disc;">
+                                <li ><span class="text-rose-400">2024-current</span><br>ABC Company</li>
+                                <li ><span class="text-rose-400">2022-2024</span><br>XYZ Company</li>
+                            </ul>
+                        </div>
+                        <div class="tabcontent" id="education">
+                            <ul style="list-style-type: disc;">
+                                <li ><span class="text-rose-400">2022-2026</span><br> Btech With CS Branch</li>
+                                <li ><span class="text-rose-400">2021-2022</span><br>High School With PCM+CS</li>
+                            </ul>
+                        </div>
+                    </div>
+                   
+                </div>
+            
         </div>
     </div>
 <!-- About end -->
@@ -83,61 +89,64 @@
   
    
   
-<div class=" ml-32" id="tasks" >
+<div class=" ml-4 md:ml-32" id="tasks" >
     <div class="">
         <h1 class="text-4xl underline underline-offset-8 place-content-center  decoration-rose-500">My Tasks</h1>
     </div>
-    <div class="flex flex-wrap mt-3 mb-6">
-        <p onclick="opentab(event, 'webdesign')" class="activelink tablink mr-16 mb-3 hover:underline hover:underline-offset-8 hover:decoration-rose-500 decoration-2">Web Design</p>
-        <p onclick="opentab(event, 'frontend')" class="tablink mr-16 mb-3 hover:underline hover:underline-offset-8 hover:decoration-rose-500 decoration-2">Frontend Development</p>
-        <p onclick="opentab(event, 'reactjs')" class="tablink mr-16 mb-3 hover:underline hover:underline-offset-8 hover:decoration-rose-500 decoration-2">React</p>
-        <p onclick="opentab(event, 'nodejs')" class="tablink mr-16 mb-3 hover:underline hover:underline-offset-8 hover:decoration-rose-500 decoration-2">NodeJS</p>
-        <p onclick="opentab(event, 'expressjs')" class="tablink mr-16 mb-3 hover:underline hover:underline-offset-8 hover:decoration-rose-500 decoration-2">ExpressJS</p>
-        <p onclick="opentab(event, 'mangodb')" class="tablink mr-16 mb-3 hover:underline hover:underline-offset-8 hover:decoration-rose-500 decoration-2">Mangodb</p>
-        <p onclick="opentab(event, 'mernstack')" class="tablink mr-16 mb-3 hover:underline hover:underline-offset-8 hover:decoration-rose-500 decoration-2">MERN STACK</p>
-    </div>
-    <div class="tabcontent activecontent" id="webdesign">
-        <ul style="list-style-type: disc;">
-            <a href="day1/day1.html"> <li class="text-rose-400">Banner</li></a>
-            <a href="day2/day2.html"> <li class="text-rose-400">Intro Page</li></a>
-        </ul>
-    </div>
-    <div class="tabcontent" id="frontend">
-        <ul style="list-style-type: disc;">
-            <a href=""> <li class="text-rose-400">br>FE1</li></a>
-            <a href=""> <li class="text-rose-400">FE2</li></a>
-        </ul>
-    </div>
-    <div class="tabcontent" id="reactjs">
-        <ul style="list-style-type: disc;">
-            <a href=""> <li class="text-rose-400">RJS1</li>
-            <a href=""> <li class="text-rose-400">RJS1</li>
-        </ul>
-    </div>
-    <div class="tabcontent" id="nodejs">
-        <ul style="list-style-type: disc;">
-            <a href=""> <li class="text-rose-400">NJS1</li></a>
-            <a href=""> <li class="text-rose-400">NJS2</li></a>
-        </ul>
-    </div>
-    <div class="tabcontent" id="expressjs">
-        <ul style="list-style-type: disc;">
-            <a href=""> <li class="text-rose-400">EJS1</li></a>
-            <a href=""> <li class="text-rose-400">EJS2</li></a>
-        </ul>
-    </div>
-    <div class="tabcontent" id="mangodb">
-        <ul style="list-style-type: disc;">
-            <a href=""> <li class="text-rose-400">MDB1</li></a>
-            <a href=""> <li class="text-rose-400">Mdb2</li></a>
-        </ul>
-    </div>
-    <div class="tabcontent" id="mernstack">
-        <ul style="list-style-type: disc;">
-            <a href=""> <li class="text-rose-400">mern1</li></a>
-            <a href=""> <li class="text-rose-400">mern2</li></a>
-        </ul>
-    </div>
+        <div class="flex sm:flex-none ml-3  flex-wrap ">
+            <div class="sm:flex sm:flex-wrap mt-3 mb-6 col-span-8 ">
+                <p onclick="opentab(event, 'webdesign')" class="activelink tablink mr-16 mb-3 hover:underline hover:underline-offset-8 hover:decoration-rose-500 decoration-2">Web Design</p>
+                <p onclick="opentab(event, 'frontend')" class="tablink mr-16 mb-3 hover:underline hover:underline-offset-8 hover:decoration-rose-500 decoration-2">Frontend Development</p>
+                <p onclick="opentab(event, 'reactjs')" class="tablink mr-16 mb-3 hover:underline hover:underline-offset-8 hover:decoration-rose-500 decoration-2">React</p>
+                <p onclick="opentab(event, 'nodejs')" class="tablink mr-16 mb-3 hover:underline hover:underline-offset-8 hover:decoration-rose-500 decoration-2">NodeJS</p>
+                <p onclick="opentab(event, 'expressjs')" class="tablink mr-16 mb-3 hover:underline hover:underline-offset-8 hover:decoration-rose-500 decoration-2">ExpressJS</p>
+                <p onclick="opentab(event, 'mangodb')" class="tablink mr-16 mb-3 hover:underline hover:underline-offset-8 hover:decoration-rose-500 decoration-2">Mangodb</p>
+                <p onclick="opentab(event, 'mernstack')" class="tablink mr-16 mb-3 hover:underline hover:underline-offset-8 hover:decoration-rose-500 decoration-2">MERN STACK</p>
+            </div>
+            <div class="tabcontent activecontent" id="webdesign">
+                <ul style="list-style-type: disc;">
+                    <a href="day1/day1.html"> <li class="text-rose-400">Banner</li></a>
+                    <a href="day2/day2.html"> <li class="text-rose-400">Intro Page</li></a>
+                </ul>
+            </div>
+            <div class="tabcontent" id="frontend">
+                <ul style="list-style-type: disc;">
+                    <a href=""> <li class="text-rose-400">br>FE1</li></a>
+                    <a href=""> <li class="text-rose-400">FE2</li></a>
+                </ul>
+            </div>
+            <div class="tabcontent" id="reactjs">
+                <ul style="list-style-type: disc;">
+                    <a href=""> <li class="text-rose-400">RJS1</li>
+                    <a href=""> <li class="text-rose-400">RJS1</li>
+                </ul>
+            </div>
+            <div class="tabcontent" id="nodejs">
+                <ul style="list-style-type: disc;">
+                    <a href=""> <li class="text-rose-400">NJS1</li></a>
+                    <a href=""> <li class="text-rose-400">NJS2</li></a>
+                </ul>
+            </div>
+            <div class="tabcontent" id="expressjs">
+                <ul style="list-style-type: disc;">
+                    <a href=""> <li class="text-rose-400">EJS1</li></a>
+                    <a href=""> <li class="text-rose-400">EJS2</li></a>
+                </ul>
+            </div>
+            <div class="tabcontent" id="mangodb">
+                <ul style="list-style-type: disc;">
+                    <a href=""> <li class="text-rose-400">MDB1</li></a>
+                    <a href=""> <li class="text-rose-400">Mdb2</li></a>
+                </ul>
+            </div>
+            <div class="tabcontent" id="mernstack">
+                <ul style="list-style-type: disc;">
+                    <a href=""> <li class="text-rose-400">mern1</li></a>
+                    <a href=""> <li class="text-rose-400">mern2</li></a>
+                </ul>
+            </div>
+        </div>
+    
 </div>
  
 
@@ -155,22 +164,22 @@
  <!-- Task Project end -->
 
  <!-- Contact -->
- <div class="flex flex-wrap justify-center  mx-10 my-10" id="contact">
-    <div class="bg-white w-full sm:w-1/3 p-5 pl-16 text-black rounded-l-2xl ">
+ <div class="md:flex md:flex-wrap justify-center  mx-10 my-10" id="contact">
+    <div class="bg-white w-full md:w-1/3 p-5 pl-16 text-black rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none ">
         <h3 class="text-2xl underline mb-4 underline-offset-8 decoration-amber-300">Nakshatra  Agrawal </h3>
-        <div class="flex gap-x-4 my-8 ">
+        <div class="flex gap-x-4 my-4 ">
             <a target="_blank" href="https://www.instagram.com/the___nakshatra?igsh=N2dyenVjbGhhcXR4"><img src="INSTA.jpg" class="w-10 h-10 rounded-full"></a>
             <a target="_blank" href="https://x.com/Nakshatra864?t=3pzbShSaD_jIbXhanSqVhw&s=09"><img src="x.jpg" class="w-10 h-10 rounded-full"></a>
             <a target="_blank" href="https://m.facebook.com/nakshatra.agrawal.391/"><img src="fb.jpg" class="w-10 h-10 rounded-full"></a>
             <a target="_blank" href="https://api.whatsapp.com/send/?phone=%2B919479586236&text&type=phone_number&app_absent=0"><img src="wp.jpg" class="w-10 h-10 rounded-full"></a>
         </div>
-        <div class="mx-6 p-2">
+        <div class=" p-2">
             <h2><i class="fa fa-phone" aria-hidden="true"></i> <a Href=tel: creates the call link >9479586236</a></h2>
             <h2><i class="fa fa-mail-forward" aria-hidden="true"></i><a Href="mailto:nakshatragrawal0806@gmail.com" >nakshatragrawal0806@gmail.com</a> </h2>
             <h2><i class="fa fa-location-arrow" aria-hidden="true"></i> Goyal Bhawan, Mali Kuwa, Khandwa, M.P. (450001)</h2>
         </div>
     </div>
-    <div class="bg-white p-5 w-full sm:w-1/3 text-black rounded-r-2xl ">
+    <div class="bg-white p-5 w-full md:w-1/3 text-black md:rounded-r-2xl rounded-b-2xl md:rounded-bl-none">
         <h3 class="text-2xl underline mb-4 underline-offset-8 decoration-amber-300">Your Message</h3>
         <h4 class="font-bold">Name</h4>
         <input placeholder="Enter your name" class="p-1 my-2 w-full text-black"><br>
