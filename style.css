@@ -6,7 +6,9 @@
     
 }
 
-
+html {
+    scroll-behavior: smooth;
+}
 
 .tabcontent {
     display: none;
