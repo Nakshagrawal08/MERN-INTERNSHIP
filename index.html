@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <link href="./output.css" rel="stylesheet">
+    <link href="src/output.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Portfolio</title>
 </head>
 <body class="bg-gray-900 text-white">
@@ -33,7 +32,7 @@
                 </li>
             </ul>
         </nav>
-        <div class="my-56 text-3xl text-center animate-pulse  ">
+        <div class="my-56 text-3xl text-center animate-pulse flex-row py-4  bg-black/50 ">
             <p>Frontend Designer</p>
             <h1 class="mt-5">Hi. I am <span class="text-blue-400 italic font-bold">Nakshatra Agrawal</span><br> from Khandwa</h1>
         </div>
@@ -51,7 +50,7 @@
                 To enhance the growth of my knowledge along with the development of technology is my <span class="font-bold">MAIN GOAL</span>.
                 Also, looking forward to becoming an inspiration  for the youth generation in the upcoming 5 to 10 years.
                 <br><br class="font-bold">Thankyou      </p>
-                <div class="flex sm:flex-col">
+                <div class="flex md:flex-col">
                     <div class="md:flex md:flex-wrap mt-3 mb-6">
                         <p onclick="opentab(event, 'skills')" class="activelink tablink mr-16 mb-3 hover:underline hover:u14derline-offset-8 hover:decoration-blue-500 decoration-2">Skills</p>
                         <p onclick="opentab(event, 'experience')" class="tablink mr-16 mb-3 hover:underline hover:u14derline-offset-8 hover:decoration-blue-500 decoration-2">Experience</p>
@@ -86,12 +85,12 @@
 
  <!-- Task and Project -->
  <section class="  justify-center mt-10">
-    <div class=" ml-4  md:mx-32 md:my-16" id="tasks" >
+    <div class=" ml-4  lg:mx-32 md:my-16" id="tasks" >
         <div class=" text-center">
             <h1 class="text-4xl underline underline-offset-14 place-content-center  decoration-blue-500">My Tasks</h1>
         </div>
         <div class=" ml-3 mt-4  flex md:flex-col ">
-            <div class="flex flex-col md:flex-row mt-3 justify-between md:gap-6 md: mb-6 col-span-8 ">
+            <div class="md:flex md:flex-wrap md:text-center  mt-3  md:gap-6 md:mb-6  ">
                 <p onclick="opentab(event, 'webdesign')" class="tablink activelink lg:border-2 hover:border-blue-500 text-blue-700 font-bold md:bg-blue-300 md:rounded-2xl lg:border-solid lg:border-gray-300 p-3">Web Development</p>
                 <p onclick="opentab(event, 'frontend')" class="tablink lg:border-2 hover:border-blue-500 text-blue-700 font-bold md:bg-blue-300 md:rounded-2xl lg:border-solid lg:border-gray-300 p-3">Frontend Development</p>
                 <p onclick="opentab(event, 'reactjs')" class="tablink lg:border-2 hover:border-blue-500 text-blue-700 font-bold md:bg-blue-300 md:rounded-2xl lg:border-solid lg:border-gray-300 p-3">React</p>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="username" placeholder="Enter Username"><br>
+    <input type="text" id="name" placeholder="Enter Name"><br>
+    <input type="text" id="number" placeholder="Enter Number"><br>
+    <input type="email" id="email" placeholder="Enter Email"><br>
+    <input type="text" id="password" placeholder="Enter Password"><br>
+    <input type="text" id="confirmPassword" placeholder="Confirm Password"><br>
+ <button onclick="register()">Register</button><br>
+ <a href="login.html">Already a user? login now</a>
+ <div id="box"></div>
+</body>
+<script>
+    function register() {
+        var username = document.getElementById('username').value;
+        var name = document.getElementById('name').value;
+        var number = document.getElementById('number').value;
+        var email = document.getElementById('email').value;
+        var result=document.getElementById('box');
+        var password = document.getElementById('password').value;
+        if (username == '' || name == '' || number == '' || email == '', password == '') {
+            //alert('Please enter username and password');
+            console.log('Please enter details');
+            result.innerHTML='Please enter details';
+        }
+        else if (username , name , number , email ,password) {
+           var data = {
+               username: username,
+               name: name,
+               number: number,
+               email: email,
+               password: password
+           }
+       };
+        result.innerHTML=`Registration successful <br>
+        Username: ${username} <br>
+        Name: ${name}<br>
+        Number: ${number}<br>
+        Email: ${email}<br>
+        `;
+
+       
+       
+    }
+</script>
+</html>
