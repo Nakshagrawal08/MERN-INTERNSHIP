@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="src/output.css" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-blue-100">
+    <button ><A href="../index.html">BACK</A></button>
+    <section class="justify-center items-center h-screen flex">
+        <div class="p-8 shadow-blue-600 shadow-sm rounded-2xl bg-amber-50">
+            <h1 class="text-2xl text-center mb-4 font-bold">Calculator</h1>
+            <Input type="number" id="num1" placeholder="Enter 2nd Number" class="p-2 m-2 border-1 border-blue-600 rounded-xl border-solid" ></Input><br>
+            <Input type="number" id="num2" placeholder="Enter 1st Number" class="p-2 m-2 border-1 border-blue-600 rounded-xl border-solid"  ></Input><br>   
+       <div class="flex">
+            <button onclick="solve('+')" class="p-3 m-2 bg-blue-400 rounded-sm font-bold ">+</button><br>
+            <button onclick="solve('-')" class="p-3 m-2 bg-blue-400 rounded-sm font-bold ">-</button><br>
+            <button onclick="solve('*')" class="p-3 m-2 bg-blue-400 rounded-sm font-bold ">*</button><br>
+            <button onclick="solve('/')" class="p-3 m-2 bg-blue-400 rounded-sm font-bold ">/</button><br>
+       </div> 
+        <div id="box"></div>
+        </div>
+    </section>
+    <script>
+        
+        function solve(op) {
+            const num1 = parseInt(document.getElementById('num1').value);
+            const num2 = parseInt(document.getElementById('num2').value);
+            let result 
+         
+        switch (op) {
+                
+                case '+':
+                    result=num1+num2;
+                    break;
+                case '-':
+                    result=num1-num2;
+                    break;
+                case '*':
+                    result=num1*num2;
+                    break;
+                case '/':
+                    result=num1/num2;
+                    break;
+                default:
+                    result.innerHTML = 'Invalid operation';
+                    break;
+            }
+            document.getElementById('box').innerText = 'Result: ' + result;
+            
+            // Clear the input fields
+            document.getElementById('no1').value = '';
+            document.getElementById('no2').value = '';
+        }
+    
+    </script>
+</body>
+</html>
