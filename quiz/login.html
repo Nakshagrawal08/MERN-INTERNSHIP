@@ -6,6 +6,7 @@
     <title>Login</title>
     <link href="src/output.css" rel="stylesheet">
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="ouizprocess.js" ></script>
 </head>
 <body class=" bg-blue-100">
     <button ><A href="../index.html">BACK</A></button>
@@ -19,43 +20,13 @@
         <input onclick="show()" type="checkbox" id="rememberMe" placeholder="." class="ml-2"> Show password
         <br>
         <button onclick="login() " class="p-2 bg-blue-400 ">Login</button><br>
-        <a href="register.html">New user? register now</a>
+        <a href="/quiz/register.html">New user? register now</a>
         <div id="box"></div>
     </div>
 </section>
 </body>
 <script>
    
-    function login() {
-        var username = document.getElementById('username').value;
-        var password = document.getElementById('password').value;
-        var result=document.getElementById('box');
-        if (username == '' || password == '') {
-            //alert('Please enter username and password');
-            console.log('Please enter username and password');
-            result.innerHTML='Please enter username and password';
-        }
-        else if (username == 'admin' && password == 'admin') {
-           console.log('Login successful');
-           //alert('Login successful');
-            result.innerHTML='Login successful';
-           
-       }
-        else {
-              console.log('Login failed');
-              //alert('Login failed');
-                result.innerHTML='Login failed';
-         }
-       
-      
-    }
-    function show() {
-        var password = document.getElementById('password');
-        if (password.type === 'password') {
-            password.type = 'text';
-        } else {
-            password.type = 'password';
-        }
-    }
+    
 </script>
 </html>
