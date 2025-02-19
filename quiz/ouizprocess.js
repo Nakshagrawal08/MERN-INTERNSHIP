@@ -218,7 +218,7 @@ var datas=[]
         // quiz one by one
 
 
-var index
+        var index
         function showQuiz(index) {
             
             var result=document.getElementById('box');
