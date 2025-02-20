@@ -178,7 +178,7 @@ var datas=[]
         
         var result=document.getElementById('box');
         questions = JSON.parse(localStorage.getItem("questions")) //isse refresh krne pr bhi data show hoga iske na 
-       result.innerHTML= questions.map((item ,i)=>`
+       result.innerHTML= questions.map((item ,i)=>`             /*i is used to show the index of the question*/
        <div class="p-8 shadow-blue-600 shadow-sm  rounded-2xl mb-5 bg-amber-50">
     
             question:${i} <b>${item.question}</b> <br>
@@ -192,7 +192,7 @@ var datas=[]
        <div id="score"><div>`
        
        }
-       
+           
       function addOption(i,option){
           ans[i]=option
          console.log(ans)
