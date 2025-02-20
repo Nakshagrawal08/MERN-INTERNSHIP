@@ -1,6 +1,7 @@
 // Registration form
 
 
+
 var desg
 function designation(des){
     desg=des;
@@ -163,14 +164,15 @@ var datas=[]
         questions= JSON.parse(localStorage.getItem("questions"))
        result.innerHTML= questions.map((item ,i)=>`
        
-       <div class="p-8 shadow-blue-600 shadow-sm  rounded-2xl mb-5 bg-amber-50">
+       <div class="p-8 shadow-blue-600 shadow-sm justify-between  rounded-2xl mb-5 bg-amber-50">
     
-            question:${i} <b>${item.question}</b> <br>
+            question:${i+1} <b>${item.question}</b> <br><i class="fa fa-trash" aria-hidden="true">hii</i> <br>
             a: ${item.opt1} <br>
             b: ${item.opt2} <br>
             c: ${item.opt3} <br>
             d: ${item.opt4} <br>
             answer: ${item.ans} <br>
+            
         </div>`
        ).join('')
        +`<a href="./quiz.html" class="p-2 bg-blue-400 rounded-xl " />Start Quiz
