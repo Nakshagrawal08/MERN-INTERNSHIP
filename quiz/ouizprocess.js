@@ -1,9 +1,13 @@
 // Registration form
 
 
-
+var desg
+function designation(des){
+    desg=des;
+    console.log(desg)
+}
 var datas=[]
-    
+       
         function register() { 
         var result=document.getElementById('box');
         var username = document.getElementById('username').value;
@@ -25,18 +29,19 @@ var datas=[]
         else if (username , name , number , email ,password ) {
          
             var data = {
-               
                username: username,
                name: name,
                number: number,
                email: email,
-               password: password
+               password: password,
+               desig:desg
            }
               datas.push(data)
             localStorage.setItem('datas', JSON.stringify(datas))
-            console.log(data);
+            console.log(datas);
            
        };
+       //window.location.href = './login.html';
          show()
     };
     function show() {
@@ -51,6 +56,7 @@ var datas=[]
             Name: ${item.name} <br>
             Number: ${item.number} <br>
             Email: ${item.email} <br>
+            designation:${item.desig}
         </div>`
        ).join('')
        }
@@ -61,38 +67,47 @@ var datas=[]
 
 
 
+      function login(){
 
-      function login() {
         var username = document.getElementById('username').value;
         var password = document.getElementById('password').value;
         var result=document.getElementById('box');
         datas = JSON.parse(localStorage.getItem("datas"))
-        if (username == '' || password == '') {
+        if (username == '' || password == ''|| desg=='') {
             //alert('Please enter username and password');
             console.log('Please enter username and password');
             result.innerHTML='Please enter username and password';
         }
-        datas.map((item)=>{
-            console.log('login process')
-            console.log(item.username,item.password)
-        if (username == item.username && password == item.password) {
-           console.log('Login successful');
-           alert('Login successful');
-            window.location.href = './question.html';
-           
-       }
-       else {
-        console.log('Login failed');
-        //alert('Login failed');
-          result.innerHTML='Login failed';
-   }
- 
-    })
+            
+            datas.map((item)=>{
+            if (item.desig==desg && item.username==username && item.password==password ) {
+                if(item.desig=="admin"){
+                console.log('Login successful');
+                //alert('Login successful');
+                result.innerHTML='Login successful';
+                window.location.href = './question.html';
+            }
 
-
-        
-    }
-    function show() {
+                if(item.desig=="student"){
+                    console.log('Login successful');
+                    //alert('Login successful');
+                    result.innerHTML='Login successful';
+                    window.location.href = './quiz.html';
+                }
+               
+            }
+            else{
+                console.log('Login unsuccessful');
+                //alert('Login successful');
+                result.innerHTML='enter correct data';
+            
+            }
+        })
+       
+}
+  
+    
+    function showpassword() {
         var password = document.getElementById('password');
         if (password.type === 'password') {
             password.type = 'text';
@@ -139,12 +154,7 @@ var datas=[]
            
        }
        showques()
-       question.value='';
-        opt1.value='';
-        opt2.value='';
-        opt3.value='';
-        opt4.value='';
-        ans.value='';;
+     
        
     
     }
@@ -164,7 +174,8 @@ var datas=[]
         </div>`
        ).join('')
        +`<a href="./quiz.html" class="p-2 bg-blue-400 rounded-xl " />Start Quiz
-       <div id="score"></div>`
+       <div id="score"></div>
+      `
       
        }
 
@@ -178,7 +189,7 @@ var datas=[]
         
         var result=document.getElementById('box');
         questions = JSON.parse(localStorage.getItem("questions")) //isse refresh krne pr bhi data show hoga iske na 
-       result.innerHTML= questions.map((item ,i)=>`             /*i is used to show the index of the question*/
+       result.innerHTML= questions.map((item ,i)=>`             
        <div class="p-8 shadow-blue-600 shadow-sm  rounded-2xl mb-5 bg-amber-50">
     
             question:${i} <b>${item.question}</b> <br>
@@ -189,7 +200,7 @@ var datas=[]
         </div>`
        ).join('')
        +`<button onClick="showresult()">Submit</button>
-       <div id="score"><div>`
+       `
        
        }
            
@@ -198,11 +209,14 @@ var datas=[]
          console.log(ans)
       }
         function showresult(){
+            
             questions = JSON.parse(localStorage.getItem("questions"))
              //isse refresh krne pr bhi data show hoga iske na c
              console.log('saved quues',questions)
-            var result=document.getElementById('score');
+            var result=document.getElementById('box');
             var score=0;
+            var wrong=0;
+            var skip=0;
             for(var i=0;i<questions.length;i++){
                 console.log('working in loop')
                 if(questions[i].ans==ans[i]){
@@ -210,8 +224,53 @@ var datas=[]
                     console.log(questions[i].ans,ans[i])
                     score++
                 }
+                else if(ans[i]==undefined){
+                    console.log("working else if condition")
+                    console.log(questions[i].ans,ans[i])
+                    skip++
+                }
+                else{   
+                    console.log("working else condition")
+                    console.log(questions[i].ans,ans[i])
+                    wrong++
             }
-            result.innerHTML=`Your score is ${score} out off ${questions.length}`
+        }
+            result.innerHTML=`
+            <div class="p-8 shadow-blue-600 shadow-sm  rounded-2xl mb-5 bg-amber-50">
+            <h1 class=" text-2xl font-bold">Result</h1>
+            <h3 class=" text-2xl font-bold"> Your score is ${score} out off ${questions.length} <br></h3>
+            <h3 class=" text-2xl font-bold"> wrong answer: ${wrong} <br></h3>
+            <h3 class=" text-2xl font-bold"> skiped questions: ${skip} <br> </h3>
+             <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+             </div>`
+             
+             const finalResult = ["correct", "wrong", "skip"];
+        const yValues = [score,wrong,skip]; 
+        const barColors = [
+            '#b6fcd5',
+            "#f88379",
+            "#8ec3f4",
+            
+        ];
+
+new Chart("myChart", {
+  type: "pie",
+  data: {
+    labels: finalResult,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "World Wide Wine Production 2018"
+    }
+  }
+});
+
+            
         }
 
 
@@ -250,3 +309,4 @@ var datas=[]
 
             }
         }
+        
