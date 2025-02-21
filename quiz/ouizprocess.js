@@ -50,7 +50,7 @@ var datas=[]
         var result=document.getElementById('box');
        var savedData = JSON.parse(localStorage.getItem("datas"))
        result.innerHTML= savedData.map((item , i)=>`
-       <div class="p-8 shadow-blue-600 shadow-sm  rounded-2xl mb-5 bg-amber-50">
+       <div class="p-8 shadow-blue-600 shadow-sm  rounded-2xl mb-5 bg-gray-700 text-neutral-100">
         Registration successful <br>
         ${i}
             Username: ${item.username} <br>
@@ -164,9 +164,9 @@ var datas=[]
         questions= JSON.parse(localStorage.getItem("questions"))
        result.innerHTML= questions.map((item ,i)=>`
        
-       <div class="p-8 shadow-blue-600 shadow-sm justify-between  rounded-2xl mb-5 bg-amber-50">
+       <div class="p-8 shadow-blue-600 shadow-sm justify-between  rounded-2xl mb-5 bg-gray-700">
     
-            question:${i+1} <b>${item.question}</b> <br><i class="fa fa-trash" aria-hidden="true">hii</i> <br>
+            question:${i+1} <b>${item.question}</b> <br>
             a: ${item.opt1} <br>
             b: ${item.opt2} <br>
             c: ${item.opt3} <br>
@@ -192,7 +192,7 @@ var datas=[]
         var result=document.getElementById('box');
         questions = JSON.parse(localStorage.getItem("questions")) //isse refresh krne pr bhi data show hoga iske na 
        result.innerHTML= questions.map((item ,i)=>`             
-       <div class="p-8 shadow-blue-600 shadow-sm  rounded-2xl mb-5 bg-amber-50">
+       <div class="p-8 shadow-blue-600 shadow-sm  rounded-2xl mb-5 bg-gray-700">
     
             question:${i} <b>${item.question}</b> <br>
               <input type='radio' name='${i}' onClick="{addOption(${i},${item.opt1})}" /> a: ${item.opt1} <br>
@@ -238,15 +238,18 @@ var datas=[]
             }
         }
             result.innerHTML=`
-            <div class="p-8 shadow-blue-600 shadow-sm  rounded-2xl mb-5 bg-amber-50">
-            <h1 class=" text-2xl font-bold">Result</h1>
+            <div class="justify-center items-center flex h-screen">
+            <div class="p-8 flex shadow-blue-600 shadow-sm  rounded-2xl mb-5 w-max  bg-gray-700">
+            <div><h1 class=" text-2xl font-bold">Result</h1>
             <h3 class=" text-2xl font-bold"> Your score is ${score} out off ${questions.length} <br></h3>
             <h3 class=" text-2xl font-bold"> wrong answer: ${wrong} <br></h3>
-            <h3 class=" text-2xl font-bold"> skiped questions: ${skip} <br> </h3>
-             <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+            <h3 class=" text-2xl font-bold"> skiped questions: ${skip} <br> </h3></div>
+            <div>
+             <canvas id="myChart" class="   w-96 h-[20%]"></canvas>
+            <div>
              </div>`
              
-             const finalResult = ["correct", "wrong", "skip"];
+        const finalResult = ["correct", "wrong", "skip"];
         const yValues = [score,wrong,skip]; 
         const barColors = [
             '#b6fcd5',
@@ -258,7 +261,7 @@ var datas=[]
 new Chart("myChart", {
   type: "pie",
   data: {
-    labels: finalResult,
+    labels : finalResult,
     datasets: [{
       backgroundColor: barColors,
       data: yValues
@@ -267,7 +270,8 @@ new Chart("myChart", {
   options: {
     title: {
       display: true,
-      text: "World Wide Wine Production 2018"
+      text: "Your Overall Performance"
+      
     }
   }
 });
@@ -284,7 +288,7 @@ new Chart("myChart", {
             
             var result=document.getElementById('box');
             questions = JSON.parse(localStorage.getItem("questions")) //isse refresh krne pr bhi data show hoga iske na 
-              result.innerHTML= `    <div class="p-8 shadow-blue-600 shadow-sm  rounded-2xl mb-5 bg-amber-50">
+              result.innerHTML= `    <div class="p-8 shadow-blue-600 shadow-sm  rounded-2xl mb-5 bg-gray-700">
               <h1> ${index+1} :${questions[index].question}</h1><br>
               <input type='radio' name='${index}' onClick="{addOption(${index},${questions[index].opt1})}" /> a: ${questions[index].opt1} <br>
               <input type='radio' name='${index}' onClick="{addOption(${index},${questions[index].opt2})}" /> b: ${questions[index].opt2} <br>  
@@ -296,17 +300,23 @@ new Chart("myChart", {
             task=document.getElementById('result')
             if(index==0){
                 console.log('condition entered')
-                task.innerHTML=`<button onClick="showQuiz(${index+1})">Next</button> <br>`
+                task.innerHTML=`
+                <div class='flex'><button onClick="showQuiz(${index+1})" class="p-2 w-20 mx-3 bg-blue-500 m-2 rounded-xl" >Next</button> <br>
+                <button onClick="showresult()" class="p-2 w-20 mx-3 bg-blue-500 m-2 rounded-xl" >Submit</button></div>`
             }
             else if(index+1<questions.length){
                 console.log('condition entered')
-                task.innerHTML=`<button onClick="showQuiz(${index+1})">Next</button> <br>
-                <button onClick="showQuiz(${index-1})">previous</button>`
+                task.innerHTML=`<div class='flex'> 
+                <button onClick="showQuiz(${index-1})" class="p-2 w-20 mx-3 bg-blue-500 m-2 rounded-xl" >previous</button><br>
+                <button onClick="showQuiz(${index+1})" class="p-2 w-20 mx-3 bg-blue-500 m-2 rounded-xl" >Next</button> <br>
+                <button onClick="showresult()" class="p-2 w-20 mx-3 bg-blue-500 m-2 rounded-xl" >Submit</button>
+                </div>`
                
                 }
             else{
-                task.innerHTML= `<button onClick="showresult()">Submit</button><br>
-                <button onClick="showQuiz(${index-1})">previous</button>
+                task.innerHTML= `<div class='flex'>
+                <button onClick="showQuiz(${index-1})" class="p-2 w-20 mx-3 bg-blue-500 m-2 rounded-xl" >previous</button></div>
+                <button onClick="showresult()" class="p-2 w-20 mx-3 bg-blue-500 m-2 rounded-xl" >Submit</button><br>
                        <div id="score"><div>`
 
             }

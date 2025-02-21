@@ -8,26 +8,26 @@
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <script src="ouizprocess.js" ></script>
 </head>
-<body class=" bg-blue-100">
+<body class="bg-gray-900 text-neutral-100">
     <button ><A href="../index.html">BACK</A></button>
 <section class="justify-center items-center flex h-screen">
-    <div class="p-8 shadow-blue-600 shadow-sm rounded-2xl bg-amber-50">
-        <h1 class="text-2xl text-center mb-4 font-bold">Login</h1>
+    <div class="p-12 shadow-white shadow-md rounded-2xl bg-gray-700 bg-amber-50">
+        <h1 class="text-2xl text-center mb-4 font-bold">LOGIN</h1>
         <br>
-        <div class="flex justify-between items-center">
-            <input onclick="designation('admin')" type="radio" name="Desg"  placeholder="."  class="ml-2"/> Admin
-            <input onclick="designation('student')" type="radio" name="Desg"  placeholder="."  class="ml-2"/> Student
+      
+            <input onclick="designation('admin')" type="radio" name="Desg"  placeholder="."  class="mx-10"/> Admin
+            <input onclick="designation('student')" type="radio" name="Desg"  placeholder="."  class="mx-8"/> Student<br>
             <br>
-        </div>
+        
        
-        <input type="text" id="username" placeholder="Enter Username" class="p-2 m-2 border-1 border-solid border-blue-800 rounded-xl max-w-full">
+        <input type="text" id="username" placeholder="Enter Username" class="p-2 m-2 border-1 border-solid border-blue-800 rounded-xl bg-neutral-100 w-[100%]">
         <br><br>
-        <input type="password" id="password" placeholder="Enter Password"  class="p-2 m-2  border-1 border-solid border-blue-800 rounded-xl max-w-full">
+        <input type="password" id="password" placeholder="Enter Password"  class="p-2 m-2  border-1 border-solid border-blue-800 rounded-xl bg-neutral-100 w-[100%]">
         <br><br>
         <input onclick="showpassword()" type="checkbox" id="rememberMe" placeholder="." class="ml-2"> Show password
         <br>
-        <button onclick="login()" class="p-2 w-full my-2 bg-blue-400 ">Login</button><br>
-        <a href="/quiz/register.html" class="">New user? register now</a>
+        <button onclick="login()" class="p-2 w-full my-2 bg-blue-500 ">Login</button><br>
+        <span class="px-20"><a href="/quiz/register.html" class="px">New user? register now</a></span>
         <div id="box"></div>
     </div>
 </section>
