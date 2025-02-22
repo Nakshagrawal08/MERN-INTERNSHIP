@@ -3,9 +3,19 @@
 
 
 var desg
-function designation(des){
+// var Status = false;
+function designation(des ,msg){
     desg=des;
     console.log(desg)
+    // if(Status!=msg){
+    //     Status=msg
+    //     console.log(Status)
+
+    // }
+    // else if ( Status==msg){
+    //     Status=false
+    //     console.log(Status)
+    // }
 }
 var datas=[]
        
@@ -175,7 +185,7 @@ var datas=[]
             
         </div>`
        ).join('')
-       +`<a href="./quiz.html" class="p-2 bg-blue-400 rounded-xl " />Start Quiz
+       +`<a href="./quiz.html" class="p-2 bg-blue-400 rounded-xl ">Start Quiz</a><br>`+`
        <div id="score"></div>
       `
       
@@ -264,7 +274,8 @@ new Chart("myChart", {
     labels : finalResult,
     datasets: [{
       backgroundColor: barColors,
-      data: yValues
+      data: yValues,
+
     }]
   },
   options: {
