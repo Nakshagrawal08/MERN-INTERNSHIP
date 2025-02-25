@@ -1,13 +1,22 @@
-import Header1 from "./assets/Components/Hearde1"
-import Header2 from "./assets/Components/Hearde2"
+import Footer from "./Components/Footer"
+import Header from "./Components/Header"
+import Mainview from "./Components/Mainview"
+import Sidebar from "./Components/Sidebar"
+
+
 function App() {
+
+
   return (
     <>
-      <h1 >FIRST REACT EXAMPLER</h1>
-      <h1>FIRST MERN PROJECT</h1>
-      <Header1/>
-      <Header2/>
+    <Header/>
+    <div className="flex">
+      <Sidebar/>
+      <Mainview/>
+    </div>     
+    <Footer/>
     </>
   )
 }
+
 export default App
