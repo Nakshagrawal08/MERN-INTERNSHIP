@@ -10,7 +10,7 @@ function App() {
   return (
     <>
     <Header/>
-    <div className="flex">
+    <div className="flex mt-16" >
       <Sidebar/>
       <Mainview/>
     </div>     
