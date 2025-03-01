@@ -13,7 +13,7 @@ function studentList() {
     <>
     {
       Student.map((data,i)=>
-        <Enterlist name={data.name} surname={data.surname} age={data.age}/>
+        <Enterlist index={i} name={data.name} surname={data.surname} age={data.age}/>
       )
    
     }

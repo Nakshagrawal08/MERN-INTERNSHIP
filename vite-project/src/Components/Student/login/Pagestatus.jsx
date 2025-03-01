@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import Home from './Home'
-import login from './login'
+import Login from './login'
 function Pagestatus() {
 
     const [isLogin,SetisLogin]=useState(false) 

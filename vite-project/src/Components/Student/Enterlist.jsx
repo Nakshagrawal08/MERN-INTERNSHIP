@@ -1,5 +1,5 @@
 import React from 'react'
-import StudentList from './studentList'
+
 
 function Enterlist(prop) {
   return (
