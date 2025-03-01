@@ -1,35 +1,46 @@
 import React, { useState } from 'react'
+import TodoDetails from './TodoDetails'
+import InputContent from './InputContent'
+import TodoButton from './TodoButton'
 
 function todo() {
   const [Addtask , SetAddtask] = useState()
   const [Addtime , SetAddtime]= useState()
   const [TodoList ,SetTodoList] = useState([])
-  
+  const Delete = (index)=>{ //deletion by usestate
+    TodoList.splice(index,1) //
+    console.log('working')
+    SetTodoList([...TodoList])
+  }
+  const Deleteall = (index)=>{ //deletion by usestate
+    TodoList.splice(index,TodoList.length) //
+    console.log('working')
+    SetTodoList([...TodoList])
+  }
+  const Add=()=>SetTodoList([
+    ...TodoList , {
+      Task : Addtask ,
+      Time : Addtime ,
+      Status : true     
+    }
+  ])
     return (
     <>
-        <div className='bg-neutral-600 border-white border-1 rounded-2xl p-6 h-96 mx-[25%]'>
+        <div className='bg-neutral-600 border-white border-1 rounded-2xl p-6  mx-[10%]'>
+         
           <h1 className='text-4xl text-center font-bold underline'>Todo List</h1><br/>
-            <input className='p-2 mx-6 w-[92%] bg-white m-2 ' type='text' value={Addtask} onChange={(e)=>SetAddtask(e.target.value)} placeholder='Enter Task'></input>
-            <input className='p-2 mx-6 w-[92%] bg-white m-2 ' type='time' value={Addtime} onChange={(e)=>SetAddtime(e.target.value)} placeholder='Enter Time'></input>
-            <div className=' p-4 grid grid-cols-3 gap-5' >
-            <button onClick={()=>SetTodoList([
-      ...TodoList , {
-        Task : Addtask ,
-        Time : Addtime      
-      }
-    ])} className='bg-blue-400 hover:bg-blue-500 p-2 rounded-2xl'> Add Task</button>
-            <button onClick={''} className='bg-emerald-400 hover:bg-emerald-500 p-2 rounded-2xl'> Show Task</button>
-            <button onClick={''} className='bg-rose-300 hover:bg-rose-400 p-2 rounded-2xl'> Delete Task</button>
-            </div>
-          {
-            TodoList.map((item,i)=>
-            <div className='bg-orange-300 flex justify-between p-3 rounded-2xl'>
-              {i+1}.
-              {item.Task}
-              <div/>{item.Time}<i className='fa-solid fa-x'></i>
 
-            </div>)
-          }
+          <InputContent type="text" value={Addtask} Onchange={(e)=>SetAddtask(e.target.value)}/>
+          <InputContent type="time" value={Addtime} Onchange={(e)=>SetAddtime(e.target.value)}/>
+          <div className=' p-4 grid-cols-2 grid gap-5' >
+            <TodoButton onClick={Add} title='Add Task' color='blue'/>
+            <TodoButton onClick={Deleteall} title='Delete All Tasks'/>
+            
+            </div>
+          
+            {TodoList.map((item,i)=>
+            <TodoDetails index={i} task={item.Task} time={item.Time} istrue={item.Status} delete={Delete}/>)
+            }
         </div>
     </>
   )
