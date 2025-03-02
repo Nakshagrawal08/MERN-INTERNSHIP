@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <input type="text" placeholder="Search" id="search" onkeyup="filter()">
+    <input type="radio" id="name" name="filter" value="name" checked onclick="changeFilterType('name')">
+    <label for="name">Name</label>
+    <input type="radio" id="surname" name="filter" value="surname" onclick="changeFilterType('surname')">
+    <label for="suname">Surname</label>
+    <input type="radio" id="age" name="filter" value="age" onclick="changeFilterType('age')">
+    <label for="age">Age</label>
+    <input type="radio" id="city" name="filter" value="city" onclick="changeFilterType('city')">
+    <label for="city">City  </label>
+    <table class="border">
+        <tr>
+            <th class="px-4">Name</th>
+            <th class="px-4">Surname</th>
+            <th class="px-4">Age</th>
+            <th class="px-4">City</th>
+        </tr>
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+    <script>
+        var listOfStudents = [
+            {name: "Manisha", surname: "Solanki", age: 18, city: "khandwa"},
+            {name: "Sneha", surname: "Aggrawal", age: 20, city: "Indore"},
+            {name: "Sonal", surname: "Aggrawal", age: 20, city: "Jabalpur" },
+        ]
+
+        var tbody = document.getElementById("tbody")
+
+        function dispaly(info){
+            tbody.innerHTML=info.map((e)=>`<tr><td>${e.name}</td><td>${e.surname}</td><td>${e.age}</td><td>${e.city}</td></tr>`).join("")
+        }
+
+        dispaly(listOfStudents)
+
+        // function filter(){
+        //     var search = document.getElementById("search").value.toLowerCase()
+        
+
+        //     if(document.getElementById("surname").checked){
+        //         var modifiedList = listOfStudents.filter((e)=>e.surname.toLowerCase().startsWith(search))
+        //         dispaly(modifiedList) 
+        //     }
+        //     else if(document.getElementById("age").checked){
+        //         modifiedList=listOfStudents.filter((e)=>e.age==search)
+        //         dispaly(modifiedList)
+        //     }
+        //     else if(document.getElementById("city").checked){
+        //         modifiedList = listOfStudents.filter((e) => e.city.toLowerCase().startsWith(search))
+        //         dispaly(modifiedList)
+        //     }
+        //     else if(document.getElementById("name").checked){
+        //         modifiedList = listOfStudents.filter((e) => e.name.toLowerCase().startsWith(search))
+        //         dispaly(modifiedList)
+        //     }
+        // }
+
+        var check = "name"
+        function changeFilterType(checkValue){
+            check = checkValue
+        }
+
+        function filter() {
+                var inputValue = document.getElementById("search").value.toLowerCase()
+
+                var modified = listOfStudents.filter(
+                    (student) => {
+                        if (check == "name") {
+                            return student.name.toLowerCase().startsWith(inputValue)
+                        }
+                        if (check == "surname") {
+                            return student.surname.toLowerCase().startsWith(inputValue)
+                        }
+                        if (check == "age") {
+                            return student.age == inputValue
+                        }
+                        if (check == "city") {
+                            return student.city.toLowerCase().startsWith(inputValue)
+                        }
+                        return true
+                    }
+                )
+                dispaly(modified)
+            }
+
+    </script>
+</body>
+</html>

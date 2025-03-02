@@ -10,7 +10,7 @@ export default function Mainview() {
       {/* <Pagestatus/>  
        <Stu/>
       <Todo/> */}
-      <Contact/>
+      
     </div></>
   )
 }
