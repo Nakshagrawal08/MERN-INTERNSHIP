@@ -17,7 +17,7 @@ function Contact() {
                 <a target="_blank" href="https://api.whatsapp.com/send/?phone=%2B919479586236&text&type=phone_number&app_absent=0"><img src="/src/pictures/wp.jpg" className="w-10 h-10 rounded-full"/></a>
             </div>
             <div className=" p-2" >
-                <h2><i className="fa fa-phone" aria-hidden="true"></i> <a href= 'tel:creates the call link '>9479586236</a></h2>
+                <h2><i className="fa fa-phone" aria-hidden="true"></i> <a href= 'tel:9479586236 '>9479586236</a></h2>
                 <h2><i className="fa fa-mail-forward" aria-hidden="true"></i><a href="mailto:nakshatragrawal0806@gmail.com" >nakshatragrawal0806@gmail.com</a> </h2>
                 <h2><i className="fa fa-location-arrow" aria-hidden="true"></i> Goyal Bhawan, Mali Kuwa, Khandwa, M.P. (450001)</h2>
             </div>

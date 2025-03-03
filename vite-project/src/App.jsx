@@ -12,10 +12,7 @@ function App() {
   return (
     <>
     {/* <Header/>
-    <div className="flex mt-16 bg-neutral-500" >
-      <Sidebar/>
-      <Mainview/>
-      
+    <Outlet />
     </div>     
     <Footer/> */}
     <Contact/>
