@@ -12,9 +12,9 @@ function About() {
             <p className="mt-8  text-justify">Owning quick learning, teamworking, and leadership skills. To enhance the growth of my knowledge along with the development of technology is my <span className="font-bold">MAIN GOAL</span>.Also, looking forward to becoming an inspiration  for the youth generation in the upcoming 5 to 10 years.<br/><br className="font-bold"/>Thankyou</p>
                 <div className="flex md:flex-col">
                     <div className="md:flex md:flex-wrap mt-3 mb-6">
-                        <p className="activelink tablink mr-16 mb-3 hover:underline hover:u14derline-offset-8 hover:decoration-blue-500 decoration-2">Skills</p>
-                        <p  className="tablink mr-16 mb-3 hover:underline hover:u14derline-offset-8 hover:decoration-blue-500 decoration-2">Experience</p>
-                        <p  className="tablink mr-16 mb-3 hover:underline hover:u14derline-offset-8 hover:decoration-blue-500 decoration-2">Education</p>
+                        <p className=" mr-16 mb-3 hover:underline hover:u14derline-offset-8 hover:decoration-blue-500 decoration-2">Skills</p>
+                        <p className=" mr-16 mb-3 hover:underline hover:u14derline-offset-8 hover:decoration-blue-500 decoration-2">Experience</p>
+                        <p className=" mr-16 mb-3 hover:underline hover:u14derline-offset-8 hover:decoration-blue-500 decoration-2">Education</p>
                     </div>
                     <div>
                         <div className="tabcontent activecontent" id="skills">
