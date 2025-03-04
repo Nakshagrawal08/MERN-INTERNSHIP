@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 import InputContact from './InputContact'
 import ListContact from './ListContact'
 import ListHeading from './ListHeading'
+import image  from './CONTACT.png'
+import grid from './grid.png'
+import pic from '../pictures/calling.jpg'
 
 function Contact() {
     const [Addname ,SetAddname]=useState()
@@ -17,27 +20,33 @@ function Contact() {
     ]) 
     const Delete = (index)=>{ //deletion by usestate
     AddContact.splice(index,1) //
-    console.log('working')
     SetAddContact([...AddContact])
   }
   const Deleteall = (index)=>{ //deletion by usestate
     AddContact.splice(index,AddContact.length) //
-    console.log('working')
+
     SetAddContact([...AddContact])
   }
   return (
     <>
-    <div className='flex justify-between text-black bg-sky-300 p-2'>
-      <div className='flex gap-3' >  
-        <i className='fa-solid fa-address-book text-3xl py-2'></i>
-        <h1 className='text-4xl text-center  font-bold underline'>Contact</h1>
+      <div className='flex justify-between text-black bg-sky-50 p-2'>
+        <div className='flex gap-3' >  
+          <i className='fa-solid text-gray-700 fa-bars hover:bg-gray-400  text-3xl hover:rounded-full p-3'></i>
+          <img src={image}className=' hover:bg-gray-400  text-3xl hover:rounded-full p-1'></img>
+          <h1 className='text-2xl pt-2 text-center  '>Contacts</h1>
+        </div>
+        <div className='w-[60%] flex shadow-black bg-sky-100 shadow-sm rounded-xl '>
+          <i className=' fa-solid text-gray-700 fa-search text-xl m-3 p-1'></i>
+          <input placeholder='Search' id='' name='' className=' my-1 mr-2 w-full border-none  p-2' ></input>
+        </div>
+        <div className='flex gap-6'>  
+          <i className="fa-solid text-gray-700 pt-4 text-3xl fa-question"></i>
+          <i className="fa-solid text-gray-700 pt-4 text-3xl  fa-gear"></i>
+          <img src={grid} className=' size-9   text-3xl mt-3'></img>
+          <img src={pic} className='size-9 border-1 mt-3 border-black rounded-full'/>
+        </div>
       </div>
-      <div>
-        <input placeholder='Search' id='' name='' className='mr-3 border-black border-2 rounded-2xl  p-2' ></input>
-        <i className=' fa-solid fa-search text-xl mr-3'></i>
-     </div>
-    </div>
-    <div className='flex p-5' >
+    <div className='flex p-5 bg-neutral-100 rounded-3xl m-5' >
       <div className='border-2 p-4 h-max border-white bg-neutral-400'>
         <div className=' p-4  border-white border-1 bg-gray-600 shadow-sm shadow-black rounded-2xl'>
             <h1 className='text-3xl text-center  font-bold underline mb-6'>Add Contact</h1>
@@ -51,12 +60,12 @@ function Contact() {
         </div>
       </div>
         <div className='w-full ml-4'>
+          <h1 className='text-3xl text-black'>Contact ({AddContact.length})</h1>
             <ListHeading/>
-      
+            <hr></hr><br></br>
         {  
            AddContact.map((item,i)=>
-          <ListContact Name={item.Name} i={i} Email={item.Email} Delete={Delete} Number={item.Number}/>)
-                
+          <ListContact Name={item.Name} i={i} Email={item.Email} Delete={Delete} Number={item.Number}/>)               
         }
         </div>
     </div>

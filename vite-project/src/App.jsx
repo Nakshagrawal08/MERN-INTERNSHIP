@@ -1,9 +1,9 @@
-import Footer from "./Components/Footer"
-import Header from "./Components/Header"
+// import Footer from "./Components/Footer"
+// import Header from "./Components/Header"
 import Contact from "./Components/Contact/Contact"
-import Mainview from "./Components/Mainview"
-import Sidebar from "./Components/Sidebar"
-import User from "./Components/Axios/User"
+// import Mainview from "./Components/Mainview"
+// import Sidebar from "./Components/Sidebar"
+// import User from "./Components/Axios/User"
 //import UsestateUsage from "./Components/Student/UsestateUsage"
 
 
@@ -15,9 +15,9 @@ function App() {
     {/* <Header/>
     <Outlet />
     </div>     
-    <Footer/> */}
-    {/* <Contact/> */}
-   <User/>
+    // <Footer/> */}
+   <Contact/>
+   {/* <User/> */}
     </>
   )
 }
