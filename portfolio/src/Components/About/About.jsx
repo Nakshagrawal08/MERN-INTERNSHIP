@@ -19,7 +19,7 @@ const data =[
         { Type:'Experience', title:'2024-current', val:'ABC Company'},
         { Type:'Experience',title:'2022-2024',val:'XYZ Company'},
         { Type: 'Education', title:'2022-2026', val:'Btech With CS Branch'},
-        {Type: 'Education', title:'2021-2022', val:'High School With PCM+CS'}
+        { Type: 'Education', title:'2021-2022', val:'High School With PCM+CS'}
     ]
   return (
     <div>
