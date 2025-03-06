@@ -1,5 +1,6 @@
-import React from 'react'
+
 import Data from './Data'
+import Address from './Address'
 function Selected(prop) {
     const ListOfUsers =prop.Details
   return (
@@ -11,7 +12,7 @@ function Selected(prop) {
             < Data title={'Email'} details={user} property={'email'} />
             < Data title={'Phone'} details={user} property={'phone'} />
             < Data title={'Username'} details={user} property={'username'} />
-            {/* <Address title={'Username'} details={user} property={'username'}/> */}
+            <Address title={'Address'} details={user} property={'address'}/>
         </div>
         :'')
        }

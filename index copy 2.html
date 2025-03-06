@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link href="src/css/output.css" rel="stylesheet">
+    <link href="src/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
+    <title>Portfolio</title>
+    <style>
+        /* Custom styles */
+        .header-bg {
+            background: url('./src/pictures/bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .navbar-item:hover {
+            text-decoration: underline;
+            color: #3b82f6;
+        }
+
+        .button-hover:hover {
+            background-color: #3b82f6;
+            color: white;
+            transition: 0.3s ease-in-out;
+        }
+
+        .hover-scale:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+
+        .custom-card {
+            border: 2px solid #3b82f6;
+            border-radius: 15px;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .custom-card:hover {
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transform: scale(1.03);
+        }
+
+        /* Mobile Responsive Navbar */
+        @media (max-width: 768px) {
+            .navbar-items {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 20px;
+            }
+
+            .navbar-items.active {
+                display: flex;
+            }
+
+            .navbar-toggle {
+                display: block;
+                cursor: pointer;
+            }
+
+            .navbar-item {
+                margin: 10px 0;
+            }
+        }
+
+        /* For Tablet and larger devices */
+        @media (min-width: 769px) {
+            .navbar-toggle {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-white">
+
+    <!-- Header -->
+    <header class="header-bg h-screen flex items-center justify-center text-center text-white py-10">
+        <div class="bg-black/50 p-8 rounded-lg">
+            <h1 class="text-4xl font-bold leading-tight mb-4">Hi, I am <span class="text-blue-400">Nakshatra Agrawal</span></h1>
+            <p class="text-xl mb-4">A passionate Frontend Designer from Khandwa</p>
+            <button class="py-3 px-10 rounded-lg text-lg font-semibold bg-blue-500 hover:bg-blue-600 transition">Let's Work Together</button>
+        </div>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="flex justify-between items-center py-6 px-12 bg-transparent fixed w-full z-10">
+        <h1 class="text-3xl font-mono text-white underline decoration-gray-300">Portfolio</h1>
+        <div class="lg:flex navbar-items">
+            <ul class="flex space-x-6">
+                <li><a href="#home" class="navbar-item text-lg">Home</a></li>
+                <li><a href="#about" class="navbar-item text-lg">About</a></li>
+                <li><a href="#tasks" class="navbar-item text-lg">Tasks</a></li>
+                <li><a href="#projects" class="navbar-item text-lg">Projects</a></li>
+                <li><a href="#contact" class="navbar-item text-lg">Contact</a></li>
+            </ul>
+        </div>
+        <!-- Mobile Hamburger Icon -->
+        <div class="lg:hidden navbar-toggle" onclick="toggleNavbar()">
+            <span class="text-white text-2xl">&#9776;</span>
+        </div>
+    </nav>
+
+    <!-- About -->
+    <section id="about" class="py-20 px-12">
+        <div class="lg:flex justify-between gap-16">
+            <div class="lg:w-1/2">
+                <img src="/src/pictures/about2.jpg" class="rounded-2xl shadow-lg w-full h-96 object-cover hover-scale" alt="Nakshatra Agrawal">
+            </div>
+            <div class="lg:w-1/2 mt-6 lg:mt-0">
+                <h2 class="text-4xl text-blue-400 mb-4">About Me</h2>
+                <p class="text-lg leading-relaxed text-gray-300">I am passionate about technology and design, constantly seeking to enhance my knowledge and skills. My ultimate goal is to create seamless user experiences and inspire future generations. <strong class="text-white">I am driven to make a positive impact in tech.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tasks and Projects -->
+    <section id="tasks" class="py-20 px-12 bg-gray-800">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl text-blue-400">My Tasks</h2>
+        </div>
+        <div class="flex flex-wrap justify-center gap-10">
+            <div class="custom-card hover-scale w-72 bg-gray-700 p-6">
+                <h3 class="text-xl text-blue-400 mb-4">Web Development</h3>
+                <ul class="text-gray-300">
+                    <li><a href="webdesign/day1/day1.html" class="hover:text-blue-400">Banner</a></li>
+                    <li><a href="webdesign/day2/day2.html" class="hover:text-blue-400">Intro Page</a></li>
+                    <li><a href="webdesign/day3/day3.html" class="hover:text-blue-400">Pralee Technology</a></li>
+                </ul>
+            </div>
+            <div class="custom-card hover-scale w-72 bg-gray-700 p-6">
+                <h3 class="text-xl text-blue-400 mb-4">Frontend Development</h3>
+                <ul class="text-gray-300">
+                    <li><a href="/quiz/login.html" class="hover:text-blue-400">Login Page</a></li>
+                    <li><a href="/quiz/register.html" class="hover:text-blue-400">Registration Page</a></li>
+                    <li><a href="calc.html" class="hover:text-blue-400">Basic Calculator</a></li>
+                </ul>
+            </div>
+            <div class="custom-card hover-scale w-72 bg-gray-700 p-6">
+                <h3 class="text-xl text-blue-400 mb-4">React JS</h3>
+                <ul class="text-gray-300">
+                    <li><a href="#" class="hover:text-blue-400">RJS1</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="py-20 px-12 bg-gray-800">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl text-blue-400">My Projects</h2>
+        </div>
+        <div class="flex flex-wrap justify-center gap-10">
+            <div class="custom-card hover-scale w-72 bg-gray-700 p-6">
+                <h3 class="text-xl text-blue-400 mb-4">Project 1</h3>
+                <a href="#" class="text-gray-300 hover:text-blue-400">Project details</a>
+            </div>
+            <div class="custom-card hover-scale w-72 bg-gray-700 p-6">
+                <h3 class="text-xl text-blue-400 mb-4">Project 2</h3>
+                <a href="#" class="text-gray-300 hover:text-blue-400">Project details</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-20 px-12 bg-gray-900">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl text-blue-400">Contact Me</h2>
+        </div>
+        <div class="lg:flex justify-center gap-16">
+            <div class="bg-gray-700 p-8 rounded-2xl w-full lg:w-1/3">
+                <h3 class="text-2xl text-blue-400 mb-4">Nakshatra Agrawal</h3>
+                <div class="flex gap-6 mb-6">
+                    <a href="https://www.instagram.com/the___nakshatra" target="_blank">
+                        <img src="/src/pictures/INSTA.jpg" alt="Instagram" class="w-10 h-10 rounded-full hover:opacity-80">
+                    </a>
+                    <a href="https://x.com/Nakshatra864" target="_blank">
+                        <img src="/src/pictures/x.jpg" alt="Twitter" class="w-10 h-10 rounded-full hover:opacity-80">
+                    </a>
+                    <a href="https://m.facebook.com/nakshatra.agrawal.391" target="_blank">
+                        <img src="/src/pictures/fb.jpg" alt="Facebook" class="w-10 h-10 rounded-full hover:opacity-80">
+                    </a>
+                    <a href="https://api.whatsapp.com/send/?phone=%2B919479586236&text&type=phone_number&app_absent=0" target="_blank">
+                        <img src="/src/pictures/wp.jpg" alt="WhatsApp" class="w-10 h-10 rounded-full hover:opacity-80">
+                    </a>
+                </div>
+                <div>
+                    <h4><i class="fa fa-phone"></i> <a href="tel:+919479586236" class="hover:text-blue-400">9479586236</a></h4>
+                    <h4><i class="fa fa-envelope"></i> <a href="mailto:nakshatragrawal0806@gmail.com" class="hover:text-blue-400">nakshatragrawal0806@gmail.com</a></h4>
+                    <h4><i class="fa fa-location-arrow"></i> Khandwa, M.P. (450001)</h4>
+                </div>
+            </div>
+            <div class="bg-gray-700 p-8 rounded-2xl w-full lg:w-1/3">
+                <h3 class="text-2xl text-blue-400 mb-4">Your Message</h3>
+                <input type="text" class="w-full p-2 mb-4 rounded-md" placeholder="Enter your name">
+                <input type="text" class="w-full p-2 mb-4 rounded-md" placeholder="Enter your number">
+                <input type="text" class="w-full p-2 mb-4 rounded-md" placeholder="Enter your address">
+                <textarea class="w-full p-2 mb-4 rounded-md" placeholder="Enter your message"></textarea>
+                <button class="py-2 px-6 bg-blue-500 hover:bg-blue-600 text-white rounded-md">Submit</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleNavbar() {
+            const navbarItems = document.querySelector('.navbar-items');
+            navbarItems.classList.toggle('active');
+        }
+    </script>
+
+</body>
+
+</html>
