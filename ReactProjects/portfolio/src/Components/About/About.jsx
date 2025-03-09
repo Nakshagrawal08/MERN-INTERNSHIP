@@ -24,11 +24,11 @@ const data =[
   return (
     <div>
         <div className="lg:flex  w-full mt-10 justify-center gap-10 px-4 px-[10%]">
-            <div className=" md:w-2/3 rounded-2xl  ">
-                <img src={Aboutimg} className="rounded-2xl border-2 border-amber-50 border-solid md:shadow-gray-400 md:max-w-full  h-96 " alt="Nakshatra Agrawal"></img>
+            <div className=" md:w-full rounded-2xl  ">
+                <img src={Aboutimg} className="rounded-2xl border-2 border-amber-50 border-solid md:shadow-gray-400 w-[85%]  h-96 " alt="Nakshatra Agrawal"></img>
             </div>
-            <div className=" md:2/3 lg:pl-16 " id="about">
-                <Aboutme/>
+            <div className=" md:2/3 lg:pl-16  " id="about">
+                <Aboutme/><br/>
                 <div className="flex md:flex-col">
                     <div className="md:flex md:flex-wrap mt-3 mb-6">
                         <Aboutselect pass={'Skills'} Choosen={Choosen}/>

@@ -5,6 +5,7 @@ import Contact from "./Components/Contact/Contact"
 // import Sidebar from "./Components/Sidebar"
 import User from "./Components/Axios/User"
 import Dashboard from './Components/SocialMediaApp/Dashboard'
+import Dashboardcopy from "./Components/SocialMediaApp/Dashboard copy"
 //import UsestateUsage from "./Components/Student/UsestateUsage"
 
 
@@ -18,8 +19,8 @@ function App() {
     </div>     
     // <Footer/> */}
    {/* <Contact/> */}
-   <User/>
-   <Dashboard/>
+   {/* <User/> */}
+  <Dashboard/>
     </>
   )
 }
