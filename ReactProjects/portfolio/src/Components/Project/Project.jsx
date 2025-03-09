@@ -5,7 +5,7 @@ import ProjectBox from './ProjectBox'
 
 export function Project() {
      
-   
+   const a=[]
   return (
         <div className=" bg-gray-800 justify-center mt-10">
             <div className=" ml-4 h-max py-10 lg:mx-24 md:my-16" id="projects" >
@@ -21,5 +21,7 @@ export function Project() {
         </div>           
          
    )
+
+
 }
 export default Project
