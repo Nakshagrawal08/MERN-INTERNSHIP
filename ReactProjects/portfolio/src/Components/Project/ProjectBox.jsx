@@ -14,7 +14,7 @@ function ProjectBox(prop) {
             <h3 class="text-xl text-center  text-blue-400 mb-4">{prop.title}</h3>
             <ul class="text-gray-300">
             {
-                data.map((item)=>item.Type==prop.title?<a href={item.link}><li className="hover:text-blue-400" >{item.title}</li></a>:'')
+                data.map((item)=><a href={item.link}><li className="hover:text-blue-400" >{item.title}</li></a>)
             }
             
                 
