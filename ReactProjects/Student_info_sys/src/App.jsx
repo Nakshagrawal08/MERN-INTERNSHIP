@@ -14,7 +14,7 @@ function App() {
           if(Response.status===200){
             SetListOfData(JSON.parse(Response.data))
             console.log(JSON.parse(Response.data));  
-            console.log('Data Fetched Successfully');
+            console.log('Data ');
           }
           
       }
