@@ -1,7 +1,7 @@
 
 import http ,{createServer} from 'http'
 import dotenv from 'dotenv'
-import { json } from 'stream/consumers'
+
 dotenv.config()
 
 var students = [
