@@ -1,22 +1,56 @@
 import express from 'express'
+import { Student } from '../db/student.model.js'
 let routes = express.Router()
 
-var students = [
-    {id:1,name:'Rahul',age:21},
-    {id:2,name:'Rohit',age:22},
-    {id:3,name:'Raj',age:23}
-]
+// var students = [
+//     {id:1,name:'Rahul',age:21},
+//     {id:2,name:'Rohit',age:22},
+//     {id:3,name:'Raj',age:23}
+// ]
 
 routes.route("")
-    .get((req,res)=>{
-        res.json(students)
+    // .get((req,res)=>{
+    //     res.json(students)
+    // })
+    // .post((req,res)=>{
+        // let studentdata=req.body
+        // students.push(studentdata)
+        
+        // let studentModel = new  Student(req.body)
+        // studentModel.save()
+        // .then((value)=>{
+        //     res.send("value")
+        // }).catch((err)=>{
+        //     res.status(500).send('save of failed')
+        // })
+        
+    // })
+    .post(async (req,res)=>{
+        
+        let studentModel = new  Student(req.body)
+        let saved=await studentModel.save()
+        if(saved){
+            res.send('student added')
+        }
+        else{
+            res.send('not done')
+        }
     })
-    .post((req,res)=>{
-        let studentdata=req.body
-        students.push(studentdata)
-        res.send('task accomplished')
+      
+        
+    .get(async (req,res)=>{
+        
+       
+        let students=await Student.find()
+        if(students){
+            res.send(students)
+        }
+        else{
+            res.send('not done')
+        }
+      
+        
     })
-
 
 routes.route("/:id")
     .get((req,res)=>{

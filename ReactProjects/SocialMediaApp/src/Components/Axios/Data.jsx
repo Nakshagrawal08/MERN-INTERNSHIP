@@ -1,8 +1,9 @@
 import React from 'react'
 
+
 function Data(prop) {
   return (<>
-   <div>
+   <div>hii
       {prop.title} : {prop.details[`${prop.property}`]}<br/>
     </div>
   

@@ -36,8 +36,10 @@ const Slice = createSlice({
             state.SelectedUser = null
             return state
         },
-        selectUser: (state, action) => {
-            state = { ...state, selectedUser: action.payload }
+        SelectUser: (state, action) => {
+            state = { ...state, SelectedUser:action.payload }
+            console.log(state)
+            return state
         },
         filter: (state, action) => {
             state = state.list.filter((e) => e.name.toLowerCase().startWtith(action.payload.toLowerCase()))
@@ -65,5 +67,5 @@ const Slice = createSlice({
 
 // cases export krne hoga DESTRUCTING K THROUGH
 // reducers ko pass krne k liye var.reducer kr k pass krne hoge YE DEFAULT H TO YE ESA KA ESA HI JAYEGA
-export const { selectUser, deletedata, filter } = Slice.actions
+export const { SelectUser, deletedata, filter } = Slice.actions
 export default Slice.reducer
