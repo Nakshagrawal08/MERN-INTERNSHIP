@@ -1,6 +1,5 @@
 import express from 'express'
-import routes from './routes/students.js'
-import { connect } from 'mongoose'
+import routes from './routes/Todo.js'
 import { connectDB } from './db/Connection.js'
 
 let app = express()
@@ -9,11 +8,14 @@ app.use(express.json())
 app.get("/",(req,res)=>{
     res.send('hello')
 })
-app.use("/students",routes)
+app.use("/todo",routes)
 connectDB().then(()=>{
-app.listen(3000,()=>console.log('server started at ',3000))
+app.listen(3008,()=>console.log('server started at ',3008))
 }).catch(err =>{
     console.log('error',err)
 })
 
-app.listen(3001,()=>console.log('express working'))
+
+
+
+

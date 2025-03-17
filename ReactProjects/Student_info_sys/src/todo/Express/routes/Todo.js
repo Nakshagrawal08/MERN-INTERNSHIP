@@ -1,14 +1,4 @@
 import express from 'express'
-import { Student } from '../db/student.model.js'
-let routes = express.Router()
-import StudentController from '../controllers/student.controller.js'
-
-// var students = [
-//     {id:1,name:'Rahul',age:21},
-//     {id:2,name:'Rohit',age:22},
-//     {id:3,name:'Raj',age:23}
-// ]
-
 routes.route("")
     // .get((req,res)=>{
     //     res.json(students)
@@ -26,16 +16,16 @@ routes.route("")
         // })
         
     // })
-    .post(StudentController.CreateStudent)
+    .post(TodoController.CreateTodo)
       
         
-    .get(StudentController.GetAll)
+    .get(TodoController.GetAll)
 
 routes.route("/:id")
    
-    .get(StudentController.GetById)
-    .delete(StudentController.DeleteById)
-    .put(StudentController.UpdateById)
+    .get(TodoController.GetById)
+    .delete(TodoController.DeleteById)
+    .put(TodoController.UpdateById)
 
     // .get((req,res)=>{
     //     let id= req.params.id
@@ -57,4 +47,3 @@ routes.route("/:id")
     //     // res.json(students[index])
     // })
     
-export default routes
