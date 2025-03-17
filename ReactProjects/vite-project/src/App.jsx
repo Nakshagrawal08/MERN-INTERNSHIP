@@ -4,6 +4,7 @@ import Contact from "./Components/Contact/Contact"
 // import Mainview from "./Components/Mainview"
 // import Sidebar from "./Components/Sidebar"
 import User from "./Components/Axios/User"
+import { Todo } from "./Components/todo/Express/db/todo.model.js"
 
 
 //import UsestateUsage from "./Components/Student/UsestateUsage"
@@ -19,7 +20,7 @@ function App() {
     </div>     
     // <Footer/> */}
    {/* <Contact/> */}
-   <User/>
+ <Todo/>
   {/* <Dashboard/> */}
   
     </>

@@ -3,7 +3,7 @@ import React from 'react'
 
 function Data(prop) {
   return (<>
-   <div>hii
+   <div>
       {prop.title} : {prop.details[`${prop.property}`]}<br/>
     </div>
   

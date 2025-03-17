@@ -1,5 +1,5 @@
 import express from 'express'
-import { Student } from '../db/student.model.js'
+
 let routes = express.Router()
 import StudentController from '../controllers/student.controller.js'
 

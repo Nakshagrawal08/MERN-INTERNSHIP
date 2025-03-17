@@ -10,21 +10,18 @@ function Selected(prop) {
   return (
   
     <div className=' '>
-    {console.log('ListOfUsers :',ListOfUsers
-
-    )
-        // ListOfUsers.map((user)=> SelectedUser==user.id?
-        +<div className='m-5 border-1 h-max border-black rounded-2xl p-8'>
-        
+    {console.log('ListOfUsers :',ListOfUsers , typeof(ListOfUsers))}
+       {SelectedUser==null?'':
+       <div className='m-5 border-1 h-max border-black rounded-2xl p-8'>
             < Data title={'Id'} details={ListOfUsers} property={'id'} />
             < Data title={'Name'} details={ListOfUsers} property={'name'} />
             < Data title={'Email'} details={ListOfUsers} property={'email'} />
             < Data title={'Phone'} details={ListOfUsers} property={'phone'} />
             < Data title={'Username'} details={ListOfUsers} property={'username'} />
             <Address title={'Address'} details={ListOfUsers} property={'address'}/>
-        </div>
-        // :'')
-       }
+        </div>}
+      
+       
     </div>
   )
 }
