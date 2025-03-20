@@ -19,8 +19,8 @@ function App() {
     <Outlet />
     </div>     
     // <Footer/> */}
-   {/* <Contact/> */}
- <Todo/>
+   <Contact/>
+ {/* <Todo/> */}
   {/* <Dashboard/> */}
   
     </>
