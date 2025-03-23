@@ -12,14 +12,19 @@ function About() {
     let Choosen=(option)=>{
     SetSelected(option)
     
+    
 }
 const data =[
-        { Type: 'Skills', title:'Web Development', val:'Web App Development'},
-        { Type: 'Skills', title:'App Development', val:'Building Android apps'},
-        { Type:'Experience', title:'2024-current', val:'ABC Company'},
-        { Type:'Experience',title:'2022-2024',val:'XYZ Company'},
+        { Type: 'Skills', title:'Soft Skills', val:['Trust Worthy' , 'Adaptibility and Flexibility' , 'Honesty' , 'Cannot say no to others']} ,       
+        { Type: 'Skills', title:'Hard Skills', val:[
+            { title :'Operating System' , val:'Windows'},
+            { title :'Database', val: 'MySql & MongoDB'},
+            { title :"Software Skills",val 	: 'MERN FullStack Development , Frontend Development by HTML CSS & JS , Tailwind CSS & Data analytics by PowerBI '}
+          ]},
+        { Type:'Experience', title:'Apr - Sep , 2024', val:' As intern in Digital Computing on React JS'},
+        //{ Type:'Experience',title:'',val:''},
         { Type: 'Education', title:'2022-2026', val:'Btech With CS Branch'},
-        { Type: 'Education', title:'2021-2022', val:'High School With PCM+CS'}
+        { Type: 'Education', title:'2021-2022', val:'High School from Kendirya Vidyalaya with 75.8%'}
     ]
   return (
     <div>
@@ -36,7 +41,7 @@ const data =[
                         <Aboutselect pass={'Education'} Choosen={Choosen}/>
                     </div>
                     <div>
-                        <AboutContent data={data} Selection={Selected}/>
+                        <AboutContent data={data} Selection={Selected} d1={data[0]} d2={data[1]}/>
                     </div>  
                 </div>                
             </div>

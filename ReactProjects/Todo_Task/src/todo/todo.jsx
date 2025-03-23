@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import  { React,useState } from 'react'
 import TodoDetails from './TodoDetails'
 import InputContent from './InputContent'
 import TodoButton from './TodoButton'

@@ -3,7 +3,7 @@ import mongoose from 'mongoose'
 const todoSchema = new mongoose.Schema({
     task : String,
     time : String,
-    date : Date 
+    // date : Date 
     
 
 },{isComplete:true})

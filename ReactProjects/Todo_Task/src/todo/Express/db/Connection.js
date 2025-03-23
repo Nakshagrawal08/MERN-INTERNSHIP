@@ -1,4 +1,4 @@
-import mangoose from 'mongoose';
+import mangoose from "mongoose";
 
 export const connectDB= async ()=>{
    try {

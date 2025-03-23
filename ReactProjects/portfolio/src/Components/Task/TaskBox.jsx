@@ -4,15 +4,15 @@ import React from 'react'
 function TaskBox(prop) {
 
     const data =[
-        { Type: 'Web Design', title:'Banner', link:'https://nakshatra0864.netlify.app/web%20design/day1/day1.html'},
-        { Type: 'Web Design', title:'Intro Page', link:'https://nakshatra0864.netlify.app/web%20design/day2/day2.html'},
-        { Type: 'Web Design', title:'Pralee Technology', link:'https://nakshatra0864.netlify.app/web%20design/day3/day3.html'}, 
+        { Type: 'Web Design', title:'Banner', link:'https://portfoliobynaksh.netlify.app/web%20design/day1/day1.html'},
+        { Type: 'Web Design', title:'Intro Page', link:'https://portfoliobynaksh.netlify.app/web%20design/day2/day2.html'},
+        { Type: 'Web Design', title:'Pralee Technology', link:'https://portfoliobynaksh.netlify.app/web%20design/day3/day3.html'}, 
     
-        { Type: 'Frontend with js', title:'Login Page', link:'https://nakshatra0864.netlify.app/quiz/login'},
-        { Type: 'Frontend with js', title:'Registration Page', link:'https://nakshatra0864.netlify.app/quiz/register'},
-        { Type: 'Frontend with js', title:'Basic Calculator', link:'https://nakshatra0864.netlify.app/calc'},
-        { Type: 'Frontend with js', title:'Quiz', link:'https://nakshatra0864.netlify.app/quiz/login'},
-        { Type: 'Frontend with js', title:'Todo', link:'#'},
+        { Type: 'Frontend with js', title:'Login Page', link:'https://portfoliobynaksh.netlify.app/quiz/login'},
+        { Type: 'Frontend with js', title:'Registration Page', link:'https://portfoliobynaksh.netlify.app/quiz/register'},
+        { Type: 'Frontend with js', title:'Basic Calculator', link:'https://portfoliobynaksh.netlify.app/calc'},
+        { Type: 'Frontend with js', title:'Quiz', link:'https://portfoliobynaksh.netlify.app/quiz/login'},
+        { Type: 'Frontend with js', title:'Todo', link:'todobynaksh.netlify.app'},
     
         { Type: 'Frontend with React', title:'Social Medial App', link:'https://social-media-bynaksh.netlify.app'},
         { Type: 'Frontend with React', title:'Contact', link:'#'},

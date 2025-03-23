@@ -1,5 +1,5 @@
 import express from 'express'
-import routes from './routes/students.js'
+import routes from './routes/todotask.js'
 import { connect } from 'mongoose'
 import { connectDB } from './db/Connection.js'
 
@@ -9,7 +9,7 @@ app.use(express.json())
 app.get("/",(req,res)=>{
     res.send('hello')
 })
-app.use("/students",routes)
+app.use("/todo",routes)
 connectDB().then(()=>{
 app.listen(3000,()=>console.log('server started at ',3000))
 }).catch(err =>{

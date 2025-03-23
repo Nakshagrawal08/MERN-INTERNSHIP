@@ -1,21 +1,20 @@
-import { TodoTask } from "../db/todo.model.js"
+import { Todo } from "../db/todo.model.js"
 
-const CreateTodoTask=async (req,res)=>{
-        
-        let taskModel = new  TodoTask(req.body)
-        let saved=await taskModel.save()
-        if(saved){
-            res.send('TodoTask added')
-        }
-        else{
-            res.send('not done')
-        }
+
+const CreatTask = async (req,res)=>{
+    let TaskModel = new Todo(req.body)
+    let saved = await TaskModel.save()
+    if(saved){
+        res.send('added')
     }
-
+    else{
+        res.send('not added')
+    }
+}
 const GetAll  = async (req,res)=>{
         
        
-        let TodoTasks=await TodoTask.find()
+        let TodoTasks=await Todo.find()
         if(TodoTasks){
             res.send(TodoTasks)
         }
@@ -28,7 +27,7 @@ const GetAll  = async (req,res)=>{
 
 const GetById = async (req,res)=>{
     let id= req.params.id
-    let TodoTaskById = await TodoTask.findById(id)
+    let TodoTaskById = await Todo.findById(id)
     if(TodoTaskById){
         res.json(TodoTaskById)
     }
@@ -40,7 +39,7 @@ const GetById = async (req,res)=>{
 const DeleteById = async(req,res)=>{
     let id= req.params.id
     try {
-         await TodoTask.findByIdAndDelete(id)
+         await Todo.findByIdAndDelete(id)
          res.send('TodoTask deleted')
     } catch(err){
         res.status(500).send('internal error')
@@ -50,7 +49,7 @@ const DeleteById = async(req,res)=>{
 const UpdateById = async(req,res)=>{
     let id= req.params.id
     try {
-        let updateedTodoTask =await TodoTask.findByIdAndUpdate(id , req.body)
+        let updateedTodoTask =await Todo.findByIdAndUpdate(id , req.body)
         if(updateedTodoTask){
             res.send('TodoTask updated')
         }
@@ -63,4 +62,4 @@ const UpdateById = async(req,res)=>{
     }
 }
 
-export default {CreateTodoTask,GetAll,GetById,DeleteById,UpdateById}
+export default {GetAll,GetById,DeleteById,UpdateById,CreatTask}
