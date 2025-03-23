@@ -4,9 +4,9 @@ import React from 'react'
 function TaskBox(prop) {
 
     const data =[
-        { Type: 'Web Design', title:'Banner', link:'https://portfoliobynaksh.netlify.app/web%20design/day1/day1.html'},
-        { Type: 'Web Design', title:'Intro Page', link:'https://portfoliobynaksh.netlify.app/web%20design/day2/day2.html'},
-        { Type: 'Web Design', title:'Pralee Technology', link:'https://portfoliobynaksh.netlify.app/web%20design/day3/day3.html'}, 
+        { Type: 'Web Design', title:'Banner', link:'https://portfoliobynaksh.netlify.app/webdesign/day1/day1.html'},
+        { Type: 'Web Design', title:'Intro Page', link:'https://portfoliobynaksh.netlify.app/webdesign/day2/day2.html'},
+        { Type: 'Web Design', title:'Pralee Technology', link:'https://portfoliobynaksh.netlify.app/webdesign/day3/day3.html'}, 
     
         { Type: 'Frontend with js', title:'Login Page', link:'https://portfoliobynaksh.netlify.app/quiz/login'},
         { Type: 'Frontend with js', title:'Registration Page', link:'https://portfoliobynaksh.netlify.app/quiz/register'},
