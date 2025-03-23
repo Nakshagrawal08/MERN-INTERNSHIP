@@ -1,10 +1,10 @@
-// import Footer from "./Components/Footer"
-// import Header from "./Components/Header"
-import Contact from "./Components/Contact/Contact"
-// import Mainview from "./Components/Mainview"
-// import Sidebar from "./Components/Sidebar"
-import User from "./Components/Axios/User"
-import Todo from "./Components/todo/todo"
+import Footer from "./Components/Footer"
+import Header from "./Components/Header"
+import { Outlet } from "react-router"
+import Mainview from "./Components/Mainview"
+import Sidebar from "./Components/Sidebar"
+// import User from "./Components/Axios/User"
+
 
 //import UsestateUsage from "./Components/Student/UsestateUsage"
 
@@ -14,14 +14,14 @@ function App() {
 
   return (
     <>
-    {/* <Header/>
-    <Outlet />
-    </div>     
-    // <Footer/> */}
-   {/* <Contact/> */}
- <Todo/>
-  {/* <Dashboard/> */}
+    <Header/>
+   <div className="flex mt-16 p-4">
+    <Sidebar/>
+   <Mainview/>
+    </div>
   
+     <Footer/>
+
     </>
   )
 }
