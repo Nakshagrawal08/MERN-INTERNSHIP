@@ -12,10 +12,10 @@ function TaskBox(prop) {
         { Type: 'Frontend with js', title:'Registration Page', link:'https://portfoliobynaksh.netlify.app/quiz/register'},
         { Type: 'Frontend with js', title:'Basic Calculator', link:'https://portfoliobynaksh.netlify.app/calc'},
         { Type: 'Frontend with js', title:'Quiz', link:'https://portfoliobynaksh.netlify.app/quiz/login'},
-        { Type: 'Frontend with js', title:'Todo', link:'https://todobynaksh.netlify.app'},
-    
+        
+        { Type: 'Frontend with React', title:'Todo', link:'https://todobynaksh.netlify.app'},
         { Type: 'Frontend with React', title:'Social Medial App', link:'https://social-media-bynaksh.netlify.app'},
-        { Type: 'Frontend with React', title:'Contact', link:'#'},
+        { Type: 'Frontend with React', title:'Contact', link:'https://contactappbynaksh.netlify.app/'},
         { Type: 'Frontend with React', title:'User/Student by Redux', link:'#'},
         { Type: 'Frontend with React', title:'Counter by UseReducer', link:'#'},
         { Type: 'Frontend with React', title:'Student Info by server connectivity', link:'#'},
