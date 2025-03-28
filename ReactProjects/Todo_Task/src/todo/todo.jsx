@@ -37,7 +37,7 @@ function todo() {
   ])
   return (
     <>
-      <div className=' mx-[30%]  bg-neutral-600 shadow-lg shadow-black border-white border-1 rounded-2xl p-6  '>
+      <div className=' mx-[30%]  bg-neutral-600 shadow-lg shadow-blackcmd border-white border-1 rounded-2xl p-6  '>
 
         <div>
           <h1 className='text-4xl text-center font-bold underline'>Todo List</h1><br />
