@@ -18,11 +18,11 @@ export default function user() {
         <div>{
     
         list.map((user)=>
-          <h1 onClick={()=>dispatch(SelectUser(user.id))}  className='text-black p-4 border-black border-1 m-2 w-72 hover:font-bold'> id: {user.id}<br/> Name :{ user.name}</h1>
+          <h1 onClick={()=>dispatch(selectUser (user.id))}  className='text-black p-4 border-black border-1 m-2 w-72 hover:font-bold'> id: {user.id}<br/> Name :{ user.name}</h1>
         )
         }
         </div>
-        <Selected Details ={list}  />
+        <Selected Details ={list}  Selected={selectUser}/>
     </div>
   )
 
