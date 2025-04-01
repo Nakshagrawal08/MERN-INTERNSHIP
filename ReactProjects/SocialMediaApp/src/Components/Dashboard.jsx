@@ -36,14 +36,7 @@ function Dashboard() {
             <div className="w-[25%]  bg-white p-4 shadow-md h-max rounded-2xl space-y-2 right-2 ">
               <h1 className=' text-2xl font-bold '>Other Users...</h1>
               <Exceptuser/>
-              <Exceptuser/>
-              <Exceptuser/>
-              <Exceptuser/>
-              <Exceptuser/>
-              <Exceptuser/>
-              <Exceptuser/>
-              <Exceptuser/>
-              <Exceptuser/>     
+             
             </div>
         </div>
         <div className="text-center bg-white p-4 mt-2 shadow-md rounded-xl">

@@ -35,7 +35,7 @@ function Contact() {
 
   const Deleteall = () => {
     const newContacts = [...AddContact];
-    newContacts.splice(0,AddContact.length);
+    newContacts.splice(0, AddContact.length);
     SetAddContact(newContacts);
   };
 
@@ -43,9 +43,9 @@ function Contact() {
     <div className="bg-gradient-to-br from-indigo-100 to-purple-100 min-h-screen p-4"> {/* Gradient background */}
       <div className="bg-white shadow-lg rounded-xl p-4 mb-6"> {/* White card for header */}
         <div className="flex justify-between items-center">
-          <ContactHeadRight/>
-          <ContactHeadMiddle/>
-          <ContactHeadLeft/>
+          <ContactHeadRight />
+          <ContactHeadMiddle />
+          <ContactHeadLeft />
         </div>
       </div>
 
@@ -73,8 +73,19 @@ function Contact() {
                 title="Enter Email"
               />
               <div className="grid grid-cols-2 gap-4 mt-4">
-                <ContactButton func={Save} colour={'indigo'} text={'Save'}/>
-                <ContactButton func={Deleteall} colour={'red'} text={'Delete All'}/>
+                <button
+                  onClick={Deleteall}
+                  className={`bg-red-600 hover:bg-red-700  text-white font-bold py-2 px-4 rounded-lg`}
+                >
+                  Delete All
+                </button>
+                <button
+                  onClick={Save}
+                  className={`bg-indigo-600 hover:bg-indigo-700  text-white font-bold py-2 px-4 rounded-lg`}
+                >
+                 Save
+                </button>
+                
               </div>
             </div>
           </div>
@@ -103,4 +114,3 @@ function Contact() {
 }
 
 export default Contact;
- 

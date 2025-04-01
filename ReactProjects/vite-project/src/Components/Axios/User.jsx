@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import Userdetails from './Userdetails'
+
 import Selected from './Selected'
 
 export default function user() {
@@ -11,7 +11,6 @@ export default function user() {
             let Response =await axios.get('https://jsonplaceholder.typicode.com/users')
             if(Response.status==200){
                 SetListOfUser(Response.data)
-                
             }
             
         }
@@ -19,20 +18,16 @@ export default function user() {
         
     },[])
 
-    const [option ,Setoption]=useState('')
-    let Extradetail=(id)=>{
-      Setoption(id)
-
-    }
-//  
+   
+ 
     const Getdetails = (id)=>{
       SetOption(id)
      
     }
   return (
     <div className='flex'>
-        <div>{
-    
+        <div>
+          {
         ListOfUsers.map((user)=>
           <h1 onClick={()=>Getdetails(user.id)}  className='text-black p-4 border-black border-1 m-2 w-72 hover:font-bold'> id: {user.id}<br/> Name :{ user.name}</h1>
         )

@@ -38,6 +38,7 @@ const Slice = createSlice({
         },
         selectUser: (state, action) => {
             state = { ...state, selectedUser: action.payload }
+            return state
         },
         filter: (state, action) => {
             state = state.list.filter((e) => e.name.toLowerCase().startWtith(action.payload.toLowerCase()))
